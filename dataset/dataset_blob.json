@@ -1,14 +1,9 @@
 {
 	"name": "dataset_blob",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "LS_getmetadata",
-			"type": "LinkedServiceReference"
-		},
 		"parameters": {
 			"filename": {
-				"type": "string",
-				"defaultValue": ".name"
+				"type": "string"
 			}
 		},
 		"annotations": [],
@@ -16,10 +11,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "@dataset().filename",
-					"type": "Expression"
-				},
 				"container": "aleemcontainer"
 			},
 			"columnDelimiter": ",",
